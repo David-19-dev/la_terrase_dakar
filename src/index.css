@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-800 text-white font-sans;
+}
+
+.section-heading {
+  @apply font-serif text-4xl sm:text-5xl md:text-6xl text-gold-600 text-center mb-8;
+}
+
+.section-subheading {
+  @apply font-serif text-2xl sm:text-3xl md:text-4xl text-gold-500 mb-4;
+}
+
+.section-text {
+  @apply text-gray-200 text-center max-w-3xl mx-auto leading-relaxed;
+}
+
+.nav-link {
+  @apply relative hover:text-gold-500 transition-colors duration-300;
+}
+
+.nav-link::after {
+  @apply content-[''] absolute w-0 h-0.5 bg-gold-500 left-0 -bottom-1
+         transition-all duration-300 ease-in-out;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.gold-button {
+  @apply border-2 border-gold-600 text-gold-600 hover:bg-gold-600/10
+         px-6 py-3 font-serif uppercase tracking-widest text-sm
+         transition duration-300 inline-block;
+}
+
+.gold-button-solid {
+  @apply bg-gold-600 border-2 border-gold-600 text-dark-800 hover:bg-gold-700 hover:border-gold-700
+         px-6 py-3 font-serif uppercase tracking-widest text-sm
+         transition duration-300 inline-block;
+}
+
+.fade-in {
+  @apply opacity-0 transition-opacity duration-1000;
+}
+
+.fade-in.appear {
+  @apply opacity-100;
+}
+
+.menu-item {
+  @apply border-b border-gold-800/30 pb-4 mb-6 last:border-0;
+}
+
+.menu-price {
+  @apply text-gold-500 font-serif;
+}
+
+.animated-bg {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
