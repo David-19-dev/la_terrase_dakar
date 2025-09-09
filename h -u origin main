@@ -1,0 +1,7 @@
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=David-19-dev
+user.email=chvro19@gmail.com
+safe.directory=//192.168.1.119/Base_info_dev/DEV/La_terrasse_Dakar/project-bolt-sb1-fm4smvtw/project
